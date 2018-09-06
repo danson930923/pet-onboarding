@@ -1,0 +1,200 @@
+:root {
+	--theme-color-mid: #ab0552;
+	--theme-color-dark: #3C255B;
+	--theme-color-light: #efebe2;
+}
+html {
+	font-family:Courier New,Georgia,Palatino,Garamond, sans-serif;
+	font-size:16px;
+	overflow:hidden;
+	background: var(--theme-color-dark);
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	font-weight:400;
+	font-size:1.2rem;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+}
+
+/* ----- Header ------- */
+header {
+	width: 100vw;
+	height: 6vh;
+	background-color: #eee;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+nav {
+	width: 100%;
+	height:100%;
+}
+
+header a , header ul{
+	float:right;
+}
+
+header a {
+	padding: 2.2vh 25px;
+	letter-spacing: 1.2px;
+	color: var(--theme-color-dark);
+}
+
+header a:hover {
+	background-color : rgb(0,0,0,0.4);
+	color: var(--theme-color-light);
+	border-bottom: 10px solid var(--theme-color-mid);
+}
+
+header ul {
+	display:none;
+}
+
+.bodycontainer {
+	margin-top: 6vh;
+	width:100vw;
+	height:94vh;
+	overflow-y: scroll;
+}
+/* ----- Main ----- */
+main {
+	width: 100vw;
+}
+
+figure {
+	width:100vw;
+	height: 94vh;
+	margin:0;
+	overflow:hidden;
+}
+
+.figurecontainer {
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.figureoutline{
+	margin: 5vh 3vw;
+	border: 3px solid #fff;
+	height: 84vh;
+	width: 94vw;
+}
+
+.figure-backgroundimage {
+	background-image:url("./images/background.jpg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.figure-title {
+	text-align: center;
+	position: relative;
+	top: 30vh;
+	left: 0;
+	font-size: 8rem;
+	color:#fff;
+	width: 100vw;
+	height: 20vh;
+}
+
+.figure-down {
+	text-align: center;
+	color: #fff;
+	font-size:4rem;
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100vw;
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8));
+}
+
+blockquote {
+	background-color:#eee;
+	font-size:1.4rem;
+	margin:0;
+	padding: 10vh 5vw;
+	color: grey;
+}
+
+section {
+	width:100vw;
+	height: 94vh;
+	margin:0;
+	overflow:hidden;
+	position:relative;
+}
+
+.aboutmesection-backgroundimage {
+	background-image:url("./images/travel.jpg");
+	background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.aboutmesection-outline{
+	margin: 5vh 3vw;
+	border: 3px solid #fff;
+	height: 74vh;
+	width: 88vw;
+	padding: 5vh 3vw;
+}
+
+.aboutmesection-text {
+	position: relative;
+	color: var(--theme-color-light);
+}
+
+.aboutme-title {
+	line-height: 300px;
+	font-size: 3rem;
+	text-align:center;
+	margin: auto;
+	height: 300px;
+	width: 300px;
+	background: var(--theme-color-light);
+	color: var(--theme-color-mid);
+	border-radius: 150px;
+	font-weight: 600;
+	margin-bottom: 50px;
+}
+
+.aboutmesection-text p {
+	line-height: 2rem;
+	font-size: 1.8rem;
+}
+
+/* ----- Footer ----- */
+footer {
+	width: 100vw;
+	height: 2vh;
+	color: var(--theme-color-light);
+	background-color: var(--theme-color-dark);
+	font-size: 0.8rem;
+	padding-top: 0.5vh;
+}
+
