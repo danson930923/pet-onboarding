@@ -1,13 +1,13 @@
 :root {
-	--theme-color-mid: #ab0552;
-	--theme-color-dark: #3C255B;
-	--theme-color-light: #efebe2;
+	--theme-color-mid: #5085a5;
+	--theme-color-dark: #687864;
+	--theme-color-light: #f7f9fb/*#efebe2*/;
 }
 html {
-	font-family:Courier New,Georgia,Palatino,Garamond, sans-serif;
+	font-family:Palatino,Courier New,Georgia,Garamond, sans-serif;
 	font-size:16px;
 	overflow:hidden;
-	background: var(--theme-color-dark);
+	background: var(--theme-color-light);
 }
 
 body {
@@ -23,14 +23,19 @@ a:link, a:visited{
 	text-decoration: none;
 }
 
+ul {
+	list-style: none;
+}
+
 /* ----- Header ------- */
 header {
 	width: 100vw;
 	height: 6vh;
-	background-color: #eee;
+	background-color: var(--theme-color-light);
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index:100;
 }
 
 nav {
@@ -44,11 +49,12 @@ header a , header ul{
 
 header a {
 	padding: 2.2vh 25px;
-	letter-spacing: 1.2px;
-	color: var(--theme-color-dark);
+	letter-spacing: 1.5px;
+	color: var(--theme-color-mid);
+	font-size:1.2rem;
 }
 
-header a:hover {
+.a-click {
 	background-color : rgb(0,0,0,0.4);
 	color: var(--theme-color-light);
 	border-bottom: 10px solid var(--theme-color-mid);
@@ -56,6 +62,14 @@ header a:hover {
 
 header ul {
 	display:none;
+	position:absolute;
+}
+
+header ul li {
+	padding: 20px;
+	background-color:rgb(0,0,0,0.4);
+	color:var(--theme-color-light);
+	border-bottom: 1px solid white;
 }
 
 .bodycontainer {
@@ -108,31 +122,46 @@ figure {
 .figure-title {
 	text-align: center;
 	position: relative;
-	top: 30vh;
+	top: 32vh;
 	left: 0;
-	font-size: 8rem;
+	font-size: 16rem;
 	color:#fff;
 	width: 100vw;
 	height: 20vh;
+
+	/*Transform*/
+	opacity: 0;
+	-webkit-transition-property: opacity; /* Safari */
+    -webkit-transition-duration: 2s; /* Safari */
+    transition-property: opacity;
+    transition-duration: 2s;
 }
 
 .figure-down {
 	text-align: center;
-	color: #fff;
+	color: var(--theme-color-mid);
 	font-size:4rem;
 	position:absolute;
 	left:0;
 	bottom:0;
 	width:100vw;
-	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8));
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
+
+	/*Transform*/
+	opacity: 0;
+	-webkit-transition-property: opacity; /* Safari */
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-property: opacity;
+    transition-duration: 0.5s;
 }
 
 blockquote {
-	background-color:#eee;
 	font-size:1.4rem;
 	margin:0;
 	padding: 10vh 5vw;
-	color: grey;
+	color: var(--theme-color-light);
+	text-align:center;
+	background-color:var(--theme-color-dark);
 }
 
 section {
@@ -144,47 +173,51 @@ section {
 }
 
 .aboutmesection-backgroundimage {
-	background-image:url("./images/travel.jpg");
+	background-image:url("./images/aboutme.jpg");
 	background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
     position:absolute;
+    /*opacity: 0.3;*/
     top:0;
     left:0;
     width:100%;
     height:100%;
 }
 
-.aboutmesection-outline{
-	margin: 5vh 3vw;
+.aboutmesection-left{
+	margin: 5vh 0;
+	margin-left: 3vw;
 	border: 3px solid #fff;
 	height: 74vh;
-	width: 88vw;
+	width: 41vw;
 	padding: 5vh 3vw;
+	float:left;
+}
+
+.aboutmesection-right {
+	margin: 5vh 3vw;
+	height: 74vh;
+	width: 40vw;
+	background-color: white;
+	float:left;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
 }
 
 .aboutmesection-text {
 	position: relative;
-	color: var(--theme-color-light);
+	color: var(--theme-color-mid);
 }
 
 .aboutme-title {
-	line-height: 300px;
+	line-height: 150px;
 	font-size: 3rem;
 	text-align:center;
-	margin: auto;
-	height: 300px;
-	width: 300px;
-	background: var(--theme-color-light);
-	color: var(--theme-color-mid);
-	border-radius: 150px;
-	font-weight: 600;
-	margin-bottom: 50px;
 }
 
 .aboutmesection-text p {
-	line-height: 2rem;
+	line-height: 4rem;
 	font-size: 1.8rem;
 }
 
@@ -192,9 +225,11 @@ section {
 footer {
 	width: 100vw;
 	height: 2vh;
-	color: var(--theme-color-light);
-	background-color: var(--theme-color-dark);
+	color: var(--theme-color-mid);
+	background-color: var(--theme-color-light);
 	font-size: 0.8rem;
 	padding-top: 0.5vh;
 }
+
+/* ----- Responsive ----- */
 

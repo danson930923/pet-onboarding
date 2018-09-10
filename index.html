@@ -12,58 +12,58 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body onload="OnLoadFunctions()">
 	<header>
 		<nav>
-			<a href="#">Contact</a>
-			<a href="#">Home</a>
-			<a href="#">Travel</a>
-			<ul>
+			<a class="nav-label" id="ContactLabel" href="#">Contact</a>
+			<a class="nav-label" id="TravelLabel" href="#">Travel</a>
+			<ul id="TravelList">
 				<li>Japan</li>
 				<li>Korean</li>
 				<li>USA</li>
 			</ul>
-			<a href="#">Study</a>
-			<ul>
+			<a class="nav-label" id="StudyLabel" href="#">Study</a>
+			<ul id="StudyList">
 				<li>British Columnbia - SFU</li>
 				<li>Alberta - Jasper</li>
 				<li>Shanghai</li>
 			</ul>
-			<a href="#">Work</a>
-			<ul>
+			<a class="nav-label" id="WorkLabel" href="#">Work</a>
+			<ul id="WorkList">
 				<li>Ontario - IBM</li>
 				<li>British Columnbia - PHSA</li>
 			</ul>
-			<a href="#">Home</a>
+			<a class="nav-label" id="HomeLabel" href="#">Home</a>
 		</nav>
 	</header>
 
 	<div class="bodycontainer">
 		<main>
-			<figure>
+			<figure id="Figure">
 				<div class="figurecontainer">
 					<div class="figure-backgroundimage"></div>
-					<div class="figure-title">Mavis.Z</div>
-					<div class="figure-down"><i class="fa fa-angle-down"></i></div>
+					<div class="figure-title" id="FigureTitle">Mavis.Z</div>
+					<div class="figure-down" id="FigureDownBar"><i class="fa fa-angle-down"></i></div>
 				</div>
 			</figure>
 			
 			<ariticle>
 
-				<blockquote>
-					<em>A man who lives right, and is right, has more power in his silence than another has by his words. 
+				<blockquote id="Blockquote">
+					<strong>"</strong><em>A man who lives right, and is right, has more power in his silence than another has by his words. 
 						<cite>-- Phillips Brooks</cite>
 					</em>
 				</blockquote>
 
-				<section>
+				<section id="Section">
 					<div class="aboutmesection-backgroundimage"></div>
-					<div class="aboutmesection-outline">
+					<div class="aboutmesection-left">
 						<div class="aboutmesection-text">
 							<div class="aboutme-title">About Me</div>
 							<p>Lorsum iprem. Lorsa sur iprem nunc, valem sur ipci. Vala sur ipci nunc, lorsum sur ipdi. Valem sur iprem. Lorsem sur iprium. Valum sur ipdi et, valum sur iprem et, lorsem sur iprem. Lorsem sur ipdi nunc, valus sur iprium. Lorsum sur iprium. Valum sur iprium. Valem sur iprem nunc, valus sur iprem. Vala sur iprium. Valem sur ipci. Lorsum sur ipdi. Lorsus sur ipdi. Lorsum sur ipdi nunc, valus sur iprem. Lorsus sur ipci nunc, lorsus sur iprem nunc, lorsus sur iprem et, lorsem sur iprem nunc, lorsus sur iprium nunc, lorsus sur ipci, lorsus sur iprium. Valum sur ipdi.</p>
 						</div>
 					</div>
+					<div class="aboutmesection-right"></div>
 				</section>
 
 			</ariticle>
@@ -73,5 +73,6 @@
 			Powered by Mavis.Z
 		</footer>
 	</div>
+	<script src="./app.js"></script>
 </body>
 </html>
