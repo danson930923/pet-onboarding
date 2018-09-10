@@ -7,13 +7,13 @@ function OnLoadFunctions(){
 
 /*Animation related to Header*/
 const header = document.querySelector('header');
-header.addEventListener("click", (e) => {
-	const navListElements = [
+const navListElements = [
 		{"Name":"WorkList", "LabelDOM":document.getElementById('WorkLabel'), "ListDOM":document.getElementById('WorkList')},
 		{"Name":"StudyList", "LabelDOM":document.getElementById('StudyLabel'), "ListDOM":document.getElementById('StudyList')},
-		{"Name":"TravelList", "LabelDOM":document.getElementById('TravelLabel'), "ListDOM":document.getElementById('TravelList')}
+		{"Name":"TravelList", "LabelDOM":document.getElementById('TravelLabel'), "ListDOM":document.getElementById('TravelList')},
+		{"Name":"GamingList", "LabelDOM":document.getElementById('GamingLabel'), "ListDOM":document.getElementById('GamingList')}
 	]
-
+header.addEventListener("click", (e) => {
 	/*Remove all clicked class && Add to specific one*/
 	document.getElementById('HomeLabel').classList.remove("a-click");
 	document.getElementById('ContactLabel').classList.remove("a-click");
@@ -52,6 +52,15 @@ header.addEventListener("click", (e) => {
 				}
 			})
 			break;
+		case 'GamingLabel':
+			navListElements.map((e) => {
+				e.Name === "GamingList" ? e.ListDOM.style.display = 'block' : e.ListDOM.style.display = 'none';
+				if (e.Name === "GamingList") {
+					e.ListDOM.style.left = e.LabelDOM.offsetLeft + 'px';
+					e.ListDOM.style.top = Math.floor(header.querySelector('.nav-label').offsetHeight) + 'px';
+				}
+			})
+			break;
 		default:
 			navListElements.map((e) => {
 				e.ListDOM.style.display = 'none';
@@ -61,12 +70,24 @@ header.addEventListener("click", (e) => {
 	/*Mouse Leave List Event*/
 	for (let i = 0; i < navListElements.length; i++){
 		navListElements[i].ListDOM.addEventListener("mouseleave", (event) => {
+			console.log("Leave");
 			navListElements[i].ListDOM.style.display = 'none';
 			e.target.classList.remove("a-click");
 		});
 	}
 });
 
+const main = document.querySelector('main');
+main.addEventListener("click", (e) => {
+	document.getElementById('HomeLabel').classList.remove("a-click");
+	document.getElementById('ContactLabel').classList.remove("a-click");
+	navListElements.map((ele) => {
+		ele.LabelDOM.classList.remove("a-click");
+	})
+	navListElements.map((e) => {
+		e.ListDOM.style.display = 'none';
+	})
+});
 
 /*Animation related to Figure*/
 let figureDownBar = document.getElementById("FigureDownBar");

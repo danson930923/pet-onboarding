@@ -90,6 +90,18 @@ figure {
 	overflow:hidden;
 }
 
+.backgroundimage {
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+/************** Title Page ***************/
 .figurecontainer {
 	position:relative;
 	top:0;
@@ -108,15 +120,6 @@ figure {
 
 .figure-backgroundimage {
 	background-image:url("./images/background.jpg");
-	background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 1;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
 }
 
 .figure-title {
@@ -164,6 +167,7 @@ blockquote {
 	background-color:var(--theme-color-dark);
 }
 
+/************** About Me Page ***************/
 section {
 	width:100vw;
 	height: 94vh;
@@ -174,15 +178,6 @@ section {
 
 .aboutmesection-backgroundimage {
 	background-image:url("./images/aboutme.jpg");
-	background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:absolute;
-    /*opacity: 0.3;*/
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
 }
 
 .aboutmesection-left{
@@ -195,30 +190,35 @@ section {
 	float:left;
 }
 
-.aboutmesection-right {
-	margin: 5vh 3vw;
-	height: 74vh;
-	width: 40vw;
-	background-color: white;
-	float:left;
-	padding-top: 5vh;
-	padding-bottom: 5vh;
-}
-
 .aboutmesection-text {
 	position: relative;
 	color: var(--theme-color-mid);
 }
 
 .aboutme-title {
-	line-height: 150px;
-	font-size: 3rem;
-	text-align:center;
+	line-height: 120px;
+	font-size: 5rem;
+	border-left: 5px solid var(--theme-color-mid);
+	padding-left: 20px;
 }
 
 .aboutmesection-text p {
 	line-height: 4rem;
 	font-size: 1.8rem;
+}
+
+/************** Gaming Page ***************/
+.gaming-backgroundimage {
+	background-image: url("./images/gaming.jpg");
+}
+
+.gaming-text {
+	position: relative;
+	color: var(--theme-color-light);
+}
+
+.gaming-title{
+	font-size: 12rem;
 }
 
 /* ----- Footer ----- */
@@ -232,4 +232,151 @@ footer {
 }
 
 /* ----- Responsive ----- */
+@media (min-width: 2100px){
 
+}
+
+@media (min-width: 1280px) and (max-width: 2099px){
+	header a {
+		padding: 2.2vh 25px;
+		letter-spacing: 1.2px;
+		color: var(--theme-color-mid);
+		font-size:1rem;
+	}
+
+	.figure-title {
+		font-size: 12rem;
+	}
+
+	.aboutme-title {
+		line-height: 150px;
+		font-size: 2rem;
+	}
+
+	.aboutmesection-text p {
+		line-height: 2.4rem;
+		font-size: 1.4rem;
+	}
+}
+
+@media (min-width:1024px) and (max-width: 1279px){
+	header a {
+		padding: 2.2vh 25px;
+		letter-spacing: 1.2px;
+		color: var(--theme-color-mid);
+		font-size:1rem;
+	}
+
+	.figure-title {
+		font-size: 10rem;
+	}
+
+	.aboutme-title {
+		line-height: 100px;
+		font-size: 2rem;
+	}
+
+	.aboutmesection-text p {
+		line-height: 2.4rem;
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width:768px) and (max-width: 1023px){
+	header a {
+		padding: 2.2vh 25px;
+		letter-spacing: 1.2px;
+		color: var(--theme-color-mid);
+		font-size:1rem;
+	}
+
+	.figure-title {
+		font-size: 10rem;
+	}
+
+	.aboutme-title {
+		line-height: 80px;
+		font-size: 2rem;
+	}
+
+	.aboutmesection-text p {
+		line-height: 2rem;
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width:768px) and (max-width: 1023px){
+	header a {
+		padding: 2.2vh 25px;
+		letter-spacing: 1.2px;
+		color: var(--theme-color-mid);
+		font-size:1rem;
+	}
+
+	.figure-title {
+		font-size: 8rem;
+	}
+
+	.aboutme-title {
+		line-height: 80px;
+		font-size: 2rem;
+	}
+
+	.aboutmesection-text p {
+		line-height: 2rem;
+		font-size: 1.2rem;
+		min-height: 120px;
+	}
+
+	nav {
+		display:none;
+	}
+}
+
+@media (min-width:768px) and (max-width: 1023px){
+	.figure-title {
+		font-size: 8rem;
+	}
+
+	.aboutme-title {
+		line-height: 50px;
+		font-size: 2rem;
+		border-left: 3px solid var(--theme-color-mid);
+	}
+
+	.aboutmesection-text p {
+		line-height: 2rem;
+		font-size: 1.2rem;
+		min-height: 120px;
+	}
+
+	nav {
+		display:none;
+	}
+}
+
+@media (min-width:320px) and (max-width: 767px){
+	.figure-title {
+		font-size: 4rem;
+	}
+
+	blockquote {
+		font-size:1rem;
+	}
+
+	.aboutme-title {
+		line-height: 30px;
+		font-size: 1rem;
+		border-left: 1px solid var(--theme-color-mid);
+	}
+
+	.aboutmesection-text p {
+		line-height: 1.2rem;
+		font-size: 0.5rem;
+		min-height: 120px;
+	}
+
+	nav {
+		display:none;
+	}
+}
