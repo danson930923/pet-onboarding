@@ -11,6 +11,8 @@ someOtherfoler/
 *.exe
 *.o
 *.so
+*.csv
+*.txt
 *.DS_Store
 
 # Packages #
